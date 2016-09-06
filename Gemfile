@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 #Haml installation
-gem 'haml'
+gem 'haml-rails'
 
 #Devise installation
 gem 'devise'
