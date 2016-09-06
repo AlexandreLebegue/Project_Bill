@@ -1,0 +1,36 @@
+<h1>Create Company </h1>
+<br />
+
+<%= form_for @company do |f|%>
+
+   <b>Name <br />
+  <div class="field">
+    <%f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  Address_id <br />
+  <div class="field">
+    <%f.label :address_id %>
+    <%= f.text_field :address_id %>
+  </div>
+
+  Siret_number<br />
+  <div class="field">
+    <%f.label :siret_number %>
+    <%= f.text_field :siret_number %>
+  </div>
+
+  Phone_number<br />
+  <div class="field">
+    <%f.label :phone_number %>
+    <%= f.text_field :phone_number %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Create Company" %>
+  </div>
+
+
+
+<%end%>
