@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <h3><b>User Information </h3></b> </br>
+  <a><b> Mail Address:</b> <i> <%=current_user.email%> </i> </a></br>
+  <a><b> Surname:</b>  <%=@user.first_name%> </a> </br>
+  <a><b> Name: </b> <%=@user.last_name%>  </a> </br>
+  <a><b> Date of creation: </b>  <%= @user.created_at %> </br>
+  <a><b> Last update: </b><%= @user.updated_at %> </br>
+  <a> <%=link_to 'Edit profile or change the password', edit_user_registration_path, class: 'navbar-link'%>
+</div>
+
+
+<div class="jumbotron">
+  <h3><b>Company Information </h3></b> </br>
+  <a><b>Company Name :</b> <%=@company.name%>  </a> </br>
+  <a><b>Siret_Number :</b> <%=@company.siret_number%>  </a></br>
+  <a><b>Phone_Number :</b> <%=@company.phone_number%>  </a></br>
+  <a><b>Address:</b> <%=@company.address_id%>  </a></br>
+  <a> <%=link_to 'Edit Company', edit_user_registration_path, class: 'navbar-link'%>
+</div>

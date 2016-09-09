@@ -1,0 +1,15 @@
+<p> Bills </p>
+
+
+
+
+
+<h2>Generate Bill</h2>
+
+<%= form_for(@bill) do |f| %>
+    <%= f.label :comment %></br>
+    <%= f.text_field :comment, autofocus: true %>
+
+    <%= f.submit "Generate", class: 'btn btn-primary' %>
+<% end %>
+<%= link_to "Back", :back %>
