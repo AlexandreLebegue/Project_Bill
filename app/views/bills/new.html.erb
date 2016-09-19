@@ -1,15 +1,22 @@
-<p> Bills </p>
-
-
-
-
-
-<h2>Generate Bill</h2>
+<div class="jumbotron">
+<h2><b>Generate Bill</b></h2>
 
 <%= form_for(@bill) do |f| %>
-    <%= f.label :comment %></br>
-    <%= f.text_field :comment, autofocus: true %>
+
+    <b><%= f.label :comment %></b></br>
+    <%= f.text_field :comment, autofocus: true %></br></br>
+
+    <b><a> Pay Method : </a></b>
+    <% tableau_assoc = {"Visa"=>"Visa","Voucher"=>"Voucher"}%>
+    <%= f.select :pay_method,tableau_assoc %></br>
+
+    <b><a> Customer : </a></b>
+    <%= f.select :customer_id, @customers %>
+    or <i><a href = "../customers/new" >add customer</a></i>
+    </br>
 
     <%= f.submit "Generate", class: 'btn btn-primary' %>
+
 <% end %>
 <%= link_to "Back", :back %>
+</div>

@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   # we set upa our User relation ship
   belongs_to :company
+  
   # we tell User that we can take company attributes
   accepts_nested_attributes_for :company
 
