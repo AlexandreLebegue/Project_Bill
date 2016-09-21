@@ -15,6 +15,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 	# generate a new company every time we edit our details
 
     params.require(:user).permit(:email,:password, :password_confirmation, :current_password,
-	company_attributes: [:id,:name])
+	company_attributes: [:id,:name, :siret_number, :phone_number])
   end
 end
