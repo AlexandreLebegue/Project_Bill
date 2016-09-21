@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160907220812) do
+ActiveRecord::Schema.define(version: 20160912130851) do
+
+  create_table "bill_items", force: :cascade do |t|
+    t.string  "reference"
+    t.string  "label"
+    t.float   "quantity"
+    t.float   "price"
+    t.float   "amount"
+    t.integer "bill_id"
+    t.index ["bill_id"], name: "index_bill_items_on_bill_id"
+  end
+
+  create_table "bills", force: :cascade do |t|
+    t.string  "bill_date"
+    t.string  "pay_date"
+    t.string  "comment"
+    t.integer "pay_method"
+    t.float   "amount"
+    t.integer "customer_id"
+    t.index ["customer_id"], name: "index_bills_on_customer_id"
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +39,18 @@ ActiveRecord::Schema.define(version: 20160907220812) do
     t.integer  "siret_number"
     t.integer  "phone_number"
     t.integer  "address_id"
+  end
+
+  create_table "customers", force: :cascade do |t|
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "email"
+    t.string  "gender"
+    t.integer "address_id"
+    t.integer "code"
+    t.integer "type"
+    t.integer "company_id"
+    t.index ["company_id"], name: "index_customers_on_company_id"
   end
 
   create_table "users", force: :cascade do |t|
