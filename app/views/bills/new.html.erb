@@ -11,7 +11,7 @@
     <%= f.select :pay_method,tableau_assoc %></br>
 
     <b><a> Customer : </a></b>
-    <%= f.select :customer_id, @customers %>
+    <%= f.select :customer_id, options_from_collection_for_select(@customers, 'id', 'first_name') %>
     or <i><a href = "../customers/new" >add customer</a></i>
     </br>
 

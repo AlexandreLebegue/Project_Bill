@@ -22,7 +22,7 @@
     <%= f.select :gender,tableau_assoc %></br>
 
     <b><a> Company : </a></b>
-    <%= f.select :company_id, @companies %>
+    <%= f.select :company_id, options_from_collection_for_select(@companies, 'id', 'name') %>
     or <i><a href = "../companies/new" >create Company</a></i>
     </br>
 

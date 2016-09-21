@@ -2,12 +2,7 @@ class CustomersController < ApplicationController
 
   def new
     @customer= Customer.new
-    @companies = []
-
-    Company.all.each do |c|
-      @companies.push(c.name)
-    end
-    
+    @companies = Company.all    
   end
 
   def create

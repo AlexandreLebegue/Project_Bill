@@ -17,11 +17,7 @@ class BillsController < ApplicationController
   def new
     @bill= Bill.new
 
-    @customers = []
-    Customer.all.each do |c|
-      @customers.push(c.first_name)
-    end
-
+    @customers = Customer.all
   end
 
   def create
