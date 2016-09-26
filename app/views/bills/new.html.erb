@@ -15,8 +15,11 @@
     or <i><a href = "../customers/new" >add customer</a></i>
     </br>
 
+  </br><%=render 'bill_items/index'%></br>
+
     <%= f.submit "Generate", class: 'btn btn-primary' %>
 
 <% end %>
+  <%=render 'bill_items/add_item' %>
 <%= link_to "Back", :back %>
 </div>

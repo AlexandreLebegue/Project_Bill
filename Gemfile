@@ -39,6 +39,10 @@ end
 #Devise installation
 gem 'devise'
 
+#Fontawesomeinstallation
+gem 'font-awesome-sass'
+
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

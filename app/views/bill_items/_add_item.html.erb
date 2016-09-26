@@ -1,0 +1,11 @@
+<%= form_tag {:controller => "bill_item", :action => "add_item_in_bill"} do %>
+
+  <b><a> Items : </a></b>
+  <input type="text" name="label" />
+  <input type="submit" value="Add this item" class="btn btn-primary" />
+  or <i><a href = "../bill_items/new" >add new item</a></i>
+<% end %>
+
+<%= form_tag "/bill_items/:id", method: "delete" do %>
+  <input type="submit" value="Delete" class='btn btn-primary' />
+<% end %>

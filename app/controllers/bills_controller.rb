@@ -16,7 +16,8 @@ class BillsController < ApplicationController
 
   def new
     @bill= Bill.new
-
+    @item = Bill_item.new
+    @items = Bill_item.all
     @customers = Customer.all
   end
 

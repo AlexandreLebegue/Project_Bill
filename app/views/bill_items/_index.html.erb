@@ -1,0 +1,17 @@
+<table>
+  <tr>
+      <td><b>Name</b></td>
+      <td><b>Reference</b></td>
+      <td><b>Price</b></td>
+      <td><b>Quantity</b></td>
+  </tr>
+
+<% for item in @items %>
+   <tr>
+       <td><%= item.reference%></td>
+       <td><%= item.label%></td>
+       <td><%= item.price%></td>
+       <td><input type="number" /></td>
+   </tr>
+<%end%>
+</table>

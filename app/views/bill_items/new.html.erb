@@ -1,0 +1,20 @@
+<div class="jumbotron">
+<h2><b>Generate Item</b></h2>
+
+<%= form_for(@item) do |f| %>
+
+    <b><%= f.label :reference %></b></br>
+    <%= f.text_field :reference, autofocus: true %></br></br>
+
+    <b><%= f.label :Name %></b></br>
+    <%= f.text_field :label, autofocus: true %></br></br>
+
+    <b><%= f.label :price %></b></br>
+    <%= f.text_field :price, autofocus: true %></br></br>
+
+
+    <%= f.submit "Generate", class: 'btn btn-primary' %>
+
+<% end %>
+<%= link_to "Back", :back %>
+</div>

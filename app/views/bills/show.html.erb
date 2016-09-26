@@ -4,8 +4,8 @@
     <b>Date of creation : </b> <%=bill.bill_date%></br>
 
     <b>Pay Method : </b> <%= bill.pay_method %></br>
-
-    <b>Comment : </b><%=bill.comment%></br>
+    <b>Customer : </b><%=Customer.find(bill.customer_id).first_name %></br>
+    <b>Comment : </b><%=bill.comment%></br>    
 
     <a href="#4"> Modify </a>
     |
