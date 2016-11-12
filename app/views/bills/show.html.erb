@@ -1,6 +1,19 @@
-<p> Bills </p>
-<p> List of bills </p>
-<% @bills.each do |bill| %>
-  <p><%= bill.id %></p>
+<% for bill in @Bill %>
+  <div class="jumbotron">
+    <p><b><h3> Bill Number <%= bill.id%></h3></b> </p> </br>
+    <b>Date of creation : </b> <%=bill.bill_date%></br>
+
+    <b>Pay Method : </b> <%= bill.pay_method %></br>
+
+    <b>Comment : </b><%=bill.comment%></br>
+
+    <a href="#4"> Modify </a>
+    |
+    <%= form_tag "/bills/#{bill.id}", method: "delete" do %>
+      <input type="submit" value="Delete" class='btn btn-primary' />
+    <% end %>
+
+  </div>
+
 <% end %>
 <p><a href= "new" > New Bill </a> </p>

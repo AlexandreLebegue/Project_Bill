@@ -1,0 +1,23 @@
+<div class="jumbotron">
+
+  <h2> <b>Create Company</b> </h2>
+<%= form_for(@company) do |f| %>
+
+<b><%= f.label :name %></b></br>
+<%= f.text_field :name, autofocus: true %></br></br>
+
+<b><%= f.label :phone_number %></b></br>
+<%= f.text_field :phone_number, autofocus: true %></br></br>
+
+<b><%= f.label :siret_number %></b></br>
+<%= f.text_field :siret_number, autofocus: true %></br></br>
+
+<b><%= f.label :address_id %></b></br>
+<%= f.text_field :address_id, autofocus: true %></br></br>
+
+
+<%= f.submit "Create", class: 'btn btn-primary' %>
+
+<%end%>
+<%= link_to "Back", :back %>
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912130851) do
+ActiveRecord::Schema.define(version: 20160915142617) do
 
   create_table "bill_items", force: :cascade do |t|
     t.string  "reference"
@@ -26,10 +26,12 @@ ActiveRecord::Schema.define(version: 20160912130851) do
     t.string  "bill_date"
     t.string  "pay_date"
     t.string  "comment"
-    t.integer "pay_method"
     t.float   "amount"
     t.integer "customer_id"
+    t.integer "user_id"
+    t.string  "pay_method"
     t.index ["customer_id"], name: "index_bills_on_customer_id"
+    t.index ["user_id"], name: "index_bills_on_user_id"
   end
 
   create_table "companies", force: :cascade do |t|
